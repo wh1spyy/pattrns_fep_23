@@ -1,0 +1,213 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+class Bill {
+private:
+    double limitingAmount;
+    double currentDebt;
+
+public:
+    Bill(double limitingAmount) : limitingAmount(limitingAmount), currentDebt(0) {}
+
+    bool check(double amount) {
+        return (currentDebt + amount) <= limitingAmount;
+    }
+
+    void add(double amount) {
+        if (check(amount)) {
+            currentDebt += amount;
+            std::cout << "Added " << amount << " to the bill. Current debt: " << currentDebt << std::endl;
+        }
+        else {
+            std::cout << "Cannot add " << amount << " to the bill. Exceeds the limit." << std::endl;
+        }
+    }
+
+    void pay(double amount) {
+        if (amount >= currentDebt) {
+            currentDebt = 0;
+            std::cout << "Bill fully paid. Remaining debt: " << currentDebt << std::endl;
+        }
+        else {
+            currentDebt -= amount;
+            std::cout << "Paid " << amount << " from the bill. Remaining debt: " << currentDebt << std::endl;
+        }
+    }
+
+    void changeTheLimit(double amount) {
+        limitingAmount = amount;
+        std::cout << "Bill limit changed to " << limitingAmount << std::endl;
+    }
+
+    double getLimitingAmount() const {
+        return limitingAmount;
+    }
+
+    double getCurrentDebt() const {
+        return currentDebt;
+    }
+};
+
+class Operator {
+private:
+    int ID;
+    double talkingCharge;
+    double messageCost;
+    double networkCharge;
+    int discountRate;
+
+public:
+    Operator(int ID, double talkingCharge, double messageCost, double networkCharge, int discountRate)
+        : ID(ID), talkingCharge(talkingCharge), messageCost(messageCost), networkCharge(networkCharge), discountRate(discountRate) {}
+
+    double calculateTalkingCost(int minute, const Bill& bill) const {
+        double cost = minute * talkingCharge;
+        if (bill.getCurrentDebt() > 0 && (bill.getLimitingAmount() - bill.getCurrentDebt()) > cost) {
+            cost *= (1 - (static_cast<double>(discountRate) / 100));
+        }
+        return cost;
+    }
+
+    double calculateMessageCost(int quantity, const Bill& bill, const Operator& otherOperator) const {
+        double cost = quantity * messageCost;
+        if (bill.getCurrentDebt() > 0 && (bill.getLimitingAmount() - bill.getCurrentDebt()) > cost && ID == otherOperator.ID) {
+            cost *= (1 - (static_cast<double>(discountRate) / 100));
+        }
+        return cost;
+    }
+
+    double calculateNetworkCost(double amount) const {
+        return amount * networkCharge;
+    }
+
+    int getID() const {
+        return ID;
+    }
+
+    double getTalkingCharge() const {
+        return talkingCharge;
+    }
+
+    double getMessageCost() const {
+        return messageCost;
+    }
+
+    double getNetworkCharge() const {
+        return networkCharge;
+    }
+
+    int getDiscountRate() const {
+        return discountRate;
+    }
+};
+
+class Customer {
+private:
+    int ID;
+    std::string name;
+    int age;
+    Operator* operatorPtr;
+    Bill* billPtr;
+
+public:
+    Customer(int ID, const std::string& name, int age, Operator* operatorPtr, Bill* billPtr)
+        : ID(ID), name(name), age(age), operatorPtr(operatorPtr), billPtr(billPtr) {}
+
+    void talk(int minute, Customer& other) {
+        double cost = operatorPtr->calculateTalkingCost(minute, *billPtr);
+        if (billPtr->check(cost)) {          
+            std::cout << name << " talked to " << other.name << " for " << minute << " minutes. Cost: " << cost << "\n";
+            billPtr->add(cost);
+        }
+        else {
+            std::cout << name << " cannot talk to " << other.name << ". Exceeds the bill limit." << std::endl;
+        }
+    }
+
+    void message(int quantity, Customer& other) {
+        double cost = operatorPtr->calculateMessageCost(quantity, *billPtr, *other.operatorPtr);
+        if (billPtr->check(cost)) {           
+            std::cout << name << " sent " << quantity << " messages to " << other.name << ". Cost: " << cost << "\n";
+            billPtr->add(cost);
+        }
+        else {
+            std::cout << name << " cannot send messages to " << other.name << ". Exceeds the bill limit." << "\n";
+        }
+    }
+
+    void connection(double amount) {
+        double cost = operatorPtr->calculateNetworkCost(amount);
+        if (billPtr->check(cost)) {           
+            std::cout << name << " connected to the internet for " << amount << " MB. Cost: " << cost << "\n";
+            billPtr->add(cost);
+        }
+        else {
+            std::cout << name << " cannot connect to the internet. Exceeds the bill limit." << "\n";
+        }
+    }
+
+    void payBills(double amount) {
+        billPtr->pay(amount);
+    }
+
+    void changeOperator(Operator* newOperator) {
+        operatorPtr = newOperator;
+        std::cout << name << " changed operator to Operator " << newOperator->getID() << "\n";
+    }
+
+    void changeBillLimit(double newLimit) {
+        billPtr->changeTheLimit(newLimit);
+    }
+
+    int getID() const {
+        return ID;
+    }
+
+    std::string getName() const {
+        return name;
+    }
+
+    int getAge() const {
+        return age;
+    }
+
+    Operator* getOperator() const {
+        return operatorPtr;
+    }
+
+    Bill* getBill() const {
+        return billPtr;
+    }
+};
+
+int main() {
+    const int N = 5; 
+    const int M = 3; 
+
+    std::vector<Customer> customers;
+    std::vector<Operator> operators;
+    Bill sharedBill(100); 
+
+
+    for (int i = 0; i < M; ++i) {
+        operators.emplace_back(i, 0.1, 0.05, 0.02, 10); 
+    }
+
+    
+    for (int i = 0; i < N; ++i) {
+        customers.emplace_back(i, "Customer" + std::to_string(i), 25, &operators[i % M], &sharedBill);
+    }
+
+   
+    customers[0].talk(30, customers[1]);
+    customers[1].talk(30, customers[2]);
+    customers[1].message(50, customers[2]);
+    customers[2].message(50, customers[3]);
+    customers[4].connection(200);
+    customers[0].changeOperator(&operators[2]);
+    customers[1].changeBillLimit(150);
+    customers[3].payBills(50);
+
+    return 0;
+}
