@@ -1,0 +1,22 @@
+[
+    {
+        "port_id": "c0a3c12f-2631-4b11-b949-20f5c9d4d2c9",
+        "longitude": 90,
+        "latitude": -89,
+        "ships": [],
+        "basic": 0,
+        "heavy": 0,
+        "refrigerated": 0,
+        "liquid": 0
+    },
+    {
+        "port_id": "d719c0e7-4d9f-44cc-b0c6-22a27a4e45f6",
+        "longitude": 76,
+        "latitude": -71,
+        "ships": [],
+        "basic": 0,
+        "heavy": 0,
+        "refrigerated": 0,
+        "liquid": 0
+    }
+]
