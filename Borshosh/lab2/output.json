@@ -1,0 +1,83 @@
+{
+    "ships": [
+        {
+            "ship_id": 1,
+            "destination_port_id": 2,
+            "total_weight_capacity": 10000,
+            "fuel_consumption_per_km": 0.1,
+            "containers": [
+                {
+                    "container_id": 1,
+                    "weight": 500,
+                    "type": "BasicContainer",
+                    "consumption": null
+                },
+                {
+                    "container_id": 5,
+                    "weight": 600,
+                    "type": "HeavyContainer",
+                    "consumption": null
+                },
+                {
+                    "container_id": 1,
+                    "weight": 500,
+                    "type": "BasicContainer",
+                    "consumption": 1250.0
+                },
+                {
+                    "container_id": 5,
+                    "weight": 600,
+                    "type": "HeavyContainer",
+                    "consumption": 1800.0
+                }
+            ]
+        },
+        {
+            "ship_id": 2,
+            "destination_port_id": 1,
+            "total_weight_capacity": 12000,
+            "fuel_consumption_per_km": 0.15,
+            "containers": [
+                {
+                    "container_id": 3,
+                    "weight": 800,
+                    "type": "BasicContainer",
+                    "consumption": null
+                },
+                {
+                    "container_id": 3,
+                    "weight": 800,
+                    "type": "BasicContainer",
+                    "consumption": 2000.0
+                }
+            ]
+        }
+    ],
+    "ports": [
+        {
+            "port_id": 1,
+            "latitude": 40.7128,
+            "longitude": -74.006,
+            "containers": [],
+            "ship_history": [
+                2
+            ],
+            "current_ships": [
+                1
+            ]
+        },
+        {
+            "port_id": 2,
+            "latitude": 34.0522,
+            "longitude": -118.2437,
+            "containers": [],
+            "ship_history": [
+                1
+            ],
+            "current_ships": [
+                2
+            ]
+        }
+    ],
+    "containers": []
+}
