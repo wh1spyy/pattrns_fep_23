@@ -1,0 +1,129 @@
+{
+    "ships": [
+        {
+            "ship_id": 1,
+            "destination_port_id": 1,
+            "total_weight_capacity": 200,
+            "fuel_consumption_per_km": 10.0,
+            "containers": [
+                {
+                    "container_id": 1,
+                    "weight": 20.0,
+                    "type": "BasicContainer",
+                    "consumption": null,
+                    "items": []
+                },
+                {
+                    "container_id": 2,
+                    "weight": 30.0,
+                    "type": "HeavyContainer",
+                    "consumption": null,
+                    "items": []
+                }
+            ]
+        },
+        {
+            "ship_id": 1,
+            "destination_port_id": 2,
+            "total_weight_capacity": 400,
+            "fuel_consumption_per_km": 15.0,
+            "containers": [
+                {
+                    "container_id": 3,
+                    "weight": 40.0,
+                    "type": "BasicContainer",
+                    "consumption": null,
+                    "items": []
+                },
+                {
+                    "container_id": 4,
+                    "weight": 50.0,
+                    "type": "RefrigeratedContainer",
+                    "consumption": null,
+                    "items": []
+                }
+            ]
+        },
+        {
+            "ship_id": 1,
+            "destination_port_id": 3,
+            "total_weight_capacity": 800,
+            "fuel_consumption_per_km": 20.0,
+            "containers": [
+                {
+                    "container_id": 5,
+                    "weight": 80.0,
+                    "type": "HeavyContainer",
+                    "consumption": null,
+                    "items": []
+                },
+                {
+                    "container_id": 6,
+                    "weight": 60.0,
+                    "type": "LiquidContainer",
+                    "consumption": null,
+                    "items": []
+                }
+            ]
+        }
+    ],
+    "ports": [
+        {
+            "port_id": 1,
+            "latitude": 40.7128,
+            "longitude": -74.006,
+            "containers": [],
+            "ship_history": [
+                1
+            ],
+            "current_ships": []
+        },
+        {
+            "port_id": 2,
+            "latitude": 34.0522,
+            "longitude": -118.2437,
+            "containers": [],
+            "ship_history": [
+                2
+            ],
+            "current_ships": []
+        },
+        {
+            "port_id": 3,
+            "latitude": 51.5074,
+            "longitude": -0.1278,
+            "containers": [],
+            "ship_history": [
+                3
+            ],
+            "current_ships": []
+        }
+    ],
+    "containers": [],
+    "items": [
+        {
+            "item_id": 1,
+            "weight": 2.0,
+            "count": 10,
+            "container_id": 1,
+            "type": "Small",
+            "specific_attribute": "Attribute1"
+        },
+        {
+            "item_id": 2,
+            "weight": 4.0,
+            "count": 5,
+            "container_id": 1,
+            "type": "Refrigerated",
+            "specific_attribute": "Attribute2"
+        },
+        {
+            "item_id": 3,
+            "weight": 8.0,
+            "count": 15,
+            "container_id": 2,
+            "type": "Heavy",
+            "specific_attribute": "Attribute3"
+        }
+    ]
+}
