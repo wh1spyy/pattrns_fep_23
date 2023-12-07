@@ -1,0 +1,200 @@
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+#include <string>
+
+// Utility function for hashing
+std::string hashFunction(const std::string& value) {
+    // Placeholder for a simple hash function
+    // In a real-world scenario, a secure hash function should be used
+    return value + "_hashed";
+}
+
+// CreditCard class
+class CreditCard {
+public:
+    std::string client;
+    std::string account_number;
+    float credit_limit;
+    int grace_period;
+    std::string cvv;  // Hashed CVV
+
+    void encrypt(std::string& value) {
+        value = hashFunction(value);
+    }
+
+    void decrypt(std::string& value) {
+        // Placeholder for decryption logic if needed
+        // Not implemented in this example
+    }
+
+    std::unordered_map<std::string, std::string> give_details() {
+        std::unordered_map<std::string, std::string> details;
+        details["client"] = client;
+        details["account_number"] = account_number;
+        details["credit_limit"] = std::to_string(credit_limit);
+        details["grace_period"] = std::to_string(grace_period);
+        details["cvv"] = cvv;
+        return details;
+    }
+};
+
+// BankInfo class
+class BankInfo {
+public:
+    std::string bank_name;
+    std::string holder_name;
+    std::vector<std::string> accounts_number;
+    std::unordered_map<std::string, std::string> credit_history;
+
+    std::vector<std::string> transaction_list(const std::string& account_number) {
+        // Placeholder for arbitrary implementation
+        return { "Transaction 1", "Transaction 2" };
+    }
+};
+
+// BankCustomer class
+class BankCustomer {
+public:
+    CreditCard creditCard;
+    BankInfo bankInfo;
+
+    virtual std::unordered_map<std::string, std::string> give_details() {
+        auto details = creditCard.give_details();
+        details["bank_name"] = bankInfo.bank_name;
+        details["holder_name"] = bankInfo.holder_name;
+
+        // Include transaction history
+        auto transactions = bankInfo.transaction_list(creditCard.account_number);
+        details["transactions"] = "Transactions: ";
+        for (const auto& transaction : transactions) {
+            details["transactions"] += transaction + ", ";
+        }
+
+        return details;
+    }
+};
+
+// Decorator: GoldenCreditCard
+class GoldenCreditCard : public CreditCard {
+public:
+    void goldenSpecificMethod() {
+        // Specific functionality for GoldenCreditCard
+        std::cout << "Golden Credit Card specific method\n";
+    }
+
+    std::unordered_map<std::string, std::string> give_details() {
+        auto details = CreditCard::give_details();
+        details["card_type"] = "Golden Credit Card";
+        return details;
+    }
+};
+
+// Decorator: CorporateCreditCard
+class CorporateCreditCard : public CreditCard {
+public:
+    void corporateSpecificMethod() {
+        // Specific functionality for CorporateCreditCard
+        std::cout << "Corporate Credit Card specific method\n";
+    }
+
+    std::unordered_map<std::string, std::string> give_details() {
+        auto details = CreditCard::give_details();
+        details["card_type"] = "Corporate Credit Card";
+        return details;
+    }
+};
+
+// Decorator: IndividualCustomer
+class IndividualCustomer : public BankCustomer {
+public:
+    void individualSpecificMethod() {
+        // Specific functionality for IndividualCustomer
+        std::cout << "Individual Customer specific method\n";
+    }
+
+    std::unordered_map<std::string, std::string> give_details() override {
+        auto details = BankCustomer::give_details();
+        details["customer_type"] = "Individual Customer";
+        return details;
+    }
+};
+
+// Decorator: CorporateCustomer
+class CorporateCustomer : public BankCustomer {
+public:
+    void corporateSpecificMethod() {
+        // Specific functionality for CorporateCustomer
+        std::cout << "Corporate Customer specific method\n";
+    }
+
+    std::unordered_map<std::string, std::string> give_details() override {
+        auto details = BankCustomer::give_details();
+        details["customer_type"] = "Corporate Customer";
+        return details;
+    }
+};
+// Decorator: VIPCustomer
+class VIPCustomer : public BankCustomer {
+public:
+    void vipSpecificMethod() {
+        // Specific functionality for VIPCustomer
+        std::cout << "VIP Customer specific method\n";
+    }
+
+    std::unordered_map<std::string, std::string> give_details() override {
+        auto details = BankCustomer::give_details();
+        details["customer_type"] = "VIP Customer";
+        return details;
+    }
+};
+
+// Client code for testing
+int main() {
+    // Test CreditCard
+    CreditCard creditCard;
+    creditCard.client = "John Doe";
+    creditCard.account_number = "123456789";
+    creditCard.credit_limit = 5000.0;
+    creditCard.grace_period = 30;
+    creditCard.cvv = "123";
+    auto creditCardDetails = creditCard.give_details();
+    for (const auto& pair : creditCardDetails) {
+        std::cout << pair.first << ": " << pair.second << "\n";
+    }
+
+    std::cout << "\n";
+
+    // Test GoldenCreditCard
+    GoldenCreditCard goldenCard;
+    goldenCard.client = "Jane Doe";
+    goldenCard.account_number = "987654321";
+    goldenCard.credit_limit = 10000.0;
+    goldenCard.grace_period = 45;
+    goldenCard.cvv = "456";
+    goldenCard.goldenSpecificMethod();
+    auto goldenCardDetails = goldenCard.give_details();
+    for (const auto& pair : goldenCardDetails) {
+        std::cout << pair.first << ": " << pair.second << "\n";
+    }
+
+    std::cout << "\n";
+
+    // Test IndividualCustomer
+    IndividualCustomer individualCustomer;
+    individualCustomer.creditCard.client = "Alice";
+    individualCustomer.creditCard.account_number = "111111111";
+    individualCustomer.creditCard.credit_limit = 2000.0;
+    individualCustomer.creditCard.grace_period = 15;
+    individualCustomer.bankInfo.bank_name = "Bank of C++";
+    individualCustomer.bankInfo.holder_name = "Alice";
+    individualCustomer.bankInfo.accounts_number = { "111111111" };
+    individualCustomer.bankInfo.credit_history["111111111"] = "Good standing";
+    individualCustomer.individualSpecificMethod();
+    auto individualDetails = individualCustomer.give_details();
+    for (const auto& pair : individualDetails) {
+        std::cout << pair.first << ": " << pair.second << "\n";
+    }
+
+    return 0;
+}
