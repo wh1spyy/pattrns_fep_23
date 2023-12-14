@@ -1,0 +1,390 @@
+{
+  "ports": [
+    {
+      "port_id": "6891b74d-4a46-4fe2-8142-43afb13415f0",
+      "ships": [
+        {
+          "ship_id": "3a1ae476-54ad-4274-9d5c-d77995cb838e",
+          "port_id": "6891b74d-4a46-4fe2-8142-43afb13415f0",
+          "ship_type": "LightWeight",
+          "ports_deliver": "e0eed637-445b-4e9c-abb3-4d626394c4ff",
+          "totalWeightCapacity": 38615,
+          "maxNumberOfAllContainers": 35,
+          "maxNumberOfHeavyContainers": 14,
+          "maxNumberOfRefrigeratedContainers": 9,
+          "maxNumberOfLiquidContainers": 8,
+          "fuelConsumptionPerKM": 0.19
+        }
+      ],
+      "basic": 8,
+      "heavy": 2,
+      "refrigerated": 4,
+      "liquid": 3,
+      "latitude": -33.350459,
+      "longitude": 53.157151,
+      "items": [
+        {
+          "item_id": "f9c6c4d3-8cd7-4b9d-92d1-a6ebc59b42dc",
+          "weight": 1.21,
+          "count": 2,
+          "containerID": "1f3ca478-7ee7-4235-9675-8373cbbfccd9",
+          "item_type": "BasicItem",
+          "total_weight": 13.1
+        },
+        {
+          "item_id": "e6059381-8f1d-4f7d-b98a-86d7490ff472",
+          "weight": 1.52,
+          "count": 4,
+          "containerID": "064b997f-698e-4b9e-9048-915d3d2d1f48",
+          "item_type": "BasicItem",
+          "total_weight": 11.48
+        },
+        {
+          "item_id": "3e10a5c1-f1b7-4d71-964b-c710acd507e4",
+          "weight": 9.66,
+          "count": 4,
+          "containerID": "ed808b38-59ba-4d89-8d69-73d68acc750f",
+          "item_type": "LiquidItem",
+          "total_weight": 39.57
+        },
+        {
+          "item_id": "a80041db-a1df-41bd-8cf1-785a09a1f87e",
+          "weight": 5.65,
+          "count": 1,
+          "containerID": "5e3f3b38-1d57-4f84-b76c-fa93938b952c",
+          "item_type": "BasicItem",
+          "total_weight": 5.12
+        },
+        {
+          "item_id": "c625f407-c701-4b1d-a20a-890b5151a2b4",
+          "weight": 1.0,
+          "count": 4,
+          "containerID": "66222b3c-7ac2-4d57-be0c-5d928528de64",
+          "item_type": "BasicItem",
+          "total_weight": 9.6
+        }
+      ]
+    },
+    {
+      "port_id": "e0eed637-445b-4e9c-abb3-4d626394c4ff",
+      "ships": [
+        {
+          "ship_id": "1d76bde3-83d8-4cb0-9614-883ddbb54b94",
+          "port_id": "e0eed637-445b-4e9c-abb3-4d626394c4ff",
+          "ship_type": "Heavy",
+          "ports_deliver": "1082b20c-fc18-4bf3-b49b-0fb96438dc31",
+          "totalWeightCapacity": 80750,
+          "maxNumberOfAllContainers": 85,
+          "maxNumberOfHeavyContainers": 29,
+          "maxNumberOfRefrigeratedContainers": 19,
+          "maxNumberOfLiquidContainers": 17,
+          "fuelConsumptionPerKM": 0.31
+        },
+        {
+          "ship_id": "9aa7dc63-3e96-4955-b19d-9a14742acea1",
+          "port_id": "e0eed637-445b-4e9c-abb3-4d626394c4ff",
+          "ship_type": "Medium",
+          "ports_deliver": "6891b74d-4a46-4fe2-8142-43afb13415f0",
+          "totalWeightCapacity": 73715,
+          "maxNumberOfAllContainers": 57,
+          "maxNumberOfHeavyContainers": 16,
+          "maxNumberOfRefrigeratedContainers": 13,
+          "maxNumberOfLiquidContainers": 10,
+          "fuelConsumptionPerKM": 0.3
+        }
+      ],
+      "basic": 5,
+      "heavy": 8,
+      "refrigerated": 2,
+      "liquid": 5,
+      "latitude": 28.464614,
+      "longitude": -46.704209,
+      "items": [
+        {
+          "item_id": "2b38fd8e-56b0-45df-b8bc-5003e79b0fb8",
+          "weight": 8.37,
+          "count": 2,
+          "containerID": "e9020393-d06b-4442-8676-63fe21c943cc",
+          "item_type": "BasicItem",
+          "total_weight": 7.16
+        },
+        {
+          "item_id": "3b9137ff-b21a-47dd-8190-a13f0d6f07d5",
+          "weight": 5.62,
+          "count": 2,
+          "containerID": "d6ad5e2a-6c51-46d3-b333-17ed116e7c6d",
+          "item_type": "RefrigeratedItem",
+          "total_weight": 32.85
+        },
+        {
+          "item_id": "551b317e-91d0-45d4-829f-429fc20890be",
+          "weight": 8.55,
+          "count": 1,
+          "containerID": "93b59504-5e7c-4658-99ef-e2800a402c15",
+          "item_type": "HeavyItem",
+          "total_weight": 9.2
+        },
+        {
+          "item_id": "8082ff83-6dd8-4b13-a371-9a447a227c33",
+          "weight": 6.53,
+          "count": 2,
+          "containerID": "c8effd8e-e3fa-4089-a444-7b2be89c9706",
+          "item_type": "BasicItem",
+          "total_weight": 4.28
+        },
+        {
+          "item_id": "c89b3463-b36a-49f9-a4cd-4cbd776853b7",
+          "weight": 4.25,
+          "count": 3,
+          "containerID": "c1003a45-b34d-4591-8842-ee681f18b08e",
+          "item_type": "HeavyItem",
+          "total_weight": 19.08
+        }
+      ]
+    },
+    {
+      "port_id": "62aeb9f0-fea8-4840-938e-3d6f4b362be3",
+      "ships": [
+        {
+          "ship_id": "451ad655-5de0-474c-9e92-2c10e59c754a",
+          "port_id": "62aeb9f0-fea8-4840-938e-3d6f4b362be3",
+          "ship_type": "Heavy",
+          "ports_deliver": "e0eed637-445b-4e9c-abb3-4d626394c4ff",
+          "totalWeightCapacity": 96477,
+          "maxNumberOfAllContainers": 95,
+          "maxNumberOfHeavyContainers": 26,
+          "maxNumberOfRefrigeratedContainers": 20,
+          "maxNumberOfLiquidContainers": 20,
+          "fuelConsumptionPerKM": 0.41
+        }
+      ],
+      "basic": 10,
+      "heavy": 6,
+      "refrigerated": 4,
+      "liquid": 1,
+      "latitude": 62.188756,
+      "longitude": 50.24487,
+      "items": [
+        {
+          "item_id": "6c491ff6-52b5-45c0-b87f-4cd3ad07b666",
+          "weight": 7.76,
+          "count": 5,
+          "containerID": "4ca0dbd0-4585-4018-94b2-ee7adf1152a9",
+          "item_type": "BasicItem",
+          "total_weight": 9.39
+        },
+        {
+          "item_id": "9fa2b22d-0e9e-4758-b5a9-11ff3f0bebfd",
+          "weight": 3.03,
+          "count": 1,
+          "containerID": "1e9de817-8ad4-49eb-bd2a-9afbc514eb33",
+          "item_type": "LiquidItem",
+          "total_weight": 40.25
+        },
+        {
+          "item_id": "195cbe80-3902-44e1-8fd6-bb58d6887883",
+          "weight": 5.47,
+          "count": 4,
+          "containerID": "110b8703-b2bb-4a9e-8a63-28d17fb2b04f",
+          "item_type": "BasicItem",
+          "total_weight": 10.17
+        },
+        {
+          "item_id": "a3d03877-3ada-4e7e-b1ab-d1f600fa1ef1",
+          "weight": 7.62,
+          "count": 3,
+          "containerID": "105e639d-31ef-493d-9468-4c8592ef1d22",
+          "item_type": "HeavyItem",
+          "total_weight": 7.04
+        },
+        {
+          "item_id": "7d308f22-e62e-47f7-a0a4-8a367d8530c1",
+          "weight": 5.65,
+          "count": 4,
+          "containerID": "6786defa-9862-494b-9492-cd5e3129f81d",
+          "item_type": "LiquidItem",
+          "total_weight": 17.42
+        }
+      ]
+    },
+    {
+      "port_id": "1082b20c-fc18-4bf3-b49b-0fb96438dc31",
+      "ships": [
+        {
+          "ship_id": "929a7595-e8d4-489a-965e-79b0090dd51a",
+          "port_id": "1082b20c-fc18-4bf3-b49b-0fb96438dc31",
+          "ship_type": "LightWeight",
+          "ports_deliver": "62aeb9f0-fea8-4840-938e-3d6f4b362be3",
+          "totalWeightCapacity": 33393,
+          "maxNumberOfAllContainers": 16,
+          "maxNumberOfHeavyContainers": 6,
+          "maxNumberOfRefrigeratedContainers": 3,
+          "maxNumberOfLiquidContainers": 10,
+          "fuelConsumptionPerKM": 0.1
+        }
+      ],
+      "basic": 5,
+      "heavy": 6,
+      "refrigerated": 4,
+      "liquid": 3,
+      "latitude": -41.336351,
+      "longitude": 74.83079,
+      "items": [
+        {
+          "item_id": "1414e01d-a2bb-4a08-8d17-0955b8c3c385",
+          "weight": 4.23,
+          "count": 5,
+          "containerID": "624740ff-8b3b-4b1c-b4f4-9bc5d9e1eaa4",
+          "item_type": "BasicItem",
+          "total_weight": 8.72
+        },
+        {
+          "item_id": "dfeec44e-8cdb-438d-af0a-05bf58617e54",
+          "weight": 7.7,
+          "count": 5,
+          "containerID": "6a77dba3-ba28-4f61-9a29-14b5a479bc31",
+          "item_type": "BasicItem",
+          "total_weight": 3.42
+        },
+        {
+          "item_id": "ba0b3c11-ad10-4dde-8f41-421f58a571ea",
+          "weight": 2.1,
+          "count": 2,
+          "containerID": "3395eabf-7e67-4197-b8d4-a2cb0c5ed89f",
+          "item_type": "RefrigeratedItem",
+          "total_weight": 33.02
+        },
+        {
+          "item_id": "00be7a19-aaa4-41a2-ae5f-6339a1a2fe69",
+          "weight": 6.29,
+          "count": 4,
+          "containerID": "1d9f090e-231d-4610-b89d-8bbbbd5cf1c2",
+          "item_type": "LiquidItem",
+          "total_weight": 43.15
+        },
+        {
+          "item_id": "141c2896-6658-48bb-9fe8-99e71b543f7a",
+          "weight": 4.63,
+          "count": 3,
+          "containerID": "f34aca44-49a1-44be-a030-85a5f042711a",
+          "item_type": "HeavyItem",
+          "total_weight": 16.73
+        }
+      ]
+    },
+    {
+      "port_id": "9e2dcf8d-7eea-4802-8944-0eecd6118f2f",
+      "ships": [],
+      "basic": 10,
+      "heavy": 2,
+      "refrigerated": 1,
+      "liquid": 1,
+      "latitude": 23.039059,
+      "longitude": 25.404131,
+      "items": [
+        {
+          "item_id": "78e97523-5c03-49dc-9479-e4ee2621134c",
+          "weight": 1.61,
+          "count": 5,
+          "containerID": "5546e39b-5c87-4873-92f4-7c3c22ab3a63",
+          "item_type": "LiquidItem",
+          "total_weight": 9.17
+        },
+        {
+          "item_id": "6c2619a3-e32f-4039-8551-23fe92713b9f",
+          "weight": 1.4,
+          "count": 5,
+          "containerID": "50a45062-3aca-4da7-8b91-1bfde64ac5ae",
+          "item_type": "LiquidItem",
+          "total_weight": 26.9
+        },
+        {
+          "item_id": "dc84154b-5ba4-4209-8a31-3984a9d82465",
+          "weight": 4.33,
+          "count": 3,
+          "containerID": "c3f5dace-e1ee-49d5-a17c-d7ef00cdfd38",
+          "item_type": "LiquidItem",
+          "total_weight": 39.04
+        },
+        {
+          "item_id": "8a27fc29-7d2b-4826-89ac-a6107014fa53",
+          "weight": 2.61,
+          "count": 2,
+          "containerID": "f263e404-a50f-405e-b2ee-5eac90a68edb",
+          "item_type": "BasicItem",
+          "total_weight": 2.42
+        },
+        {
+          "item_id": "fd38d29e-56d6-4135-8019-c4021474c8e9",
+          "weight": 1.91,
+          "count": 5,
+          "containerID": "77517469-7b63-41ce-8e73-3b1a8e35aeef",
+          "item_type": "HeavyItem",
+          "total_weight": 15.0
+        }
+      ]
+    }
+  ],
+  "ships": [
+    {
+      "ship_id": "929a7595-e8d4-489a-965e-79b0090dd51a",
+      "port_id": "1082b20c-fc18-4bf3-b49b-0fb96438dc31",
+      "ship_type": "LightWeight",
+      "ports_deliver": "62aeb9f0-fea8-4840-938e-3d6f4b362be3",
+      "totalWeightCapacity": 33393,
+      "maxNumberOfAllContainers": 16,
+      "maxNumberOfHeavyContainers": 6,
+      "maxNumberOfRefrigeratedContainers": 3,
+      "maxNumberOfLiquidContainers": 10,
+      "fuelConsumptionPerKM": 0.1
+    },
+    {
+      "ship_id": "1d76bde3-83d8-4cb0-9614-883ddbb54b94",
+      "port_id": "e0eed637-445b-4e9c-abb3-4d626394c4ff",
+      "ship_type": "Heavy",
+      "ports_deliver": "1082b20c-fc18-4bf3-b49b-0fb96438dc31",
+      "totalWeightCapacity": 80750,
+      "maxNumberOfAllContainers": 85,
+      "maxNumberOfHeavyContainers": 29,
+      "maxNumberOfRefrigeratedContainers": 19,
+      "maxNumberOfLiquidContainers": 17,
+      "fuelConsumptionPerKM": 0.31
+    },
+    {
+      "ship_id": "451ad655-5de0-474c-9e92-2c10e59c754a",
+      "port_id": "62aeb9f0-fea8-4840-938e-3d6f4b362be3",
+      "ship_type": "Heavy",
+      "ports_deliver": "e0eed637-445b-4e9c-abb3-4d626394c4ff",
+      "totalWeightCapacity": 96477,
+      "maxNumberOfAllContainers": 95,
+      "maxNumberOfHeavyContainers": 26,
+      "maxNumberOfRefrigeratedContainers": 20,
+      "maxNumberOfLiquidContainers": 20,
+      "fuelConsumptionPerKM": 0.41
+    },
+    {
+      "ship_id": "9aa7dc63-3e96-4955-b19d-9a14742acea1",
+      "port_id": "e0eed637-445b-4e9c-abb3-4d626394c4ff",
+      "ship_type": "Medium",
+      "ports_deliver": "6891b74d-4a46-4fe2-8142-43afb13415f0",
+      "totalWeightCapacity": 73715,
+      "maxNumberOfAllContainers": 57,
+      "maxNumberOfHeavyContainers": 16,
+      "maxNumberOfRefrigeratedContainers": 13,
+      "maxNumberOfLiquidContainers": 10,
+      "fuelConsumptionPerKM": 0.3
+    },
+    {
+      "ship_id": "3a1ae476-54ad-4274-9d5c-d77995cb838e",
+      "port_id": "6891b74d-4a46-4fe2-8142-43afb13415f0",
+      "ship_type": "LightWeight",
+      "ports_deliver": "e0eed637-445b-4e9c-abb3-4d626394c4ff",
+      "totalWeightCapacity": 38615,
+      "maxNumberOfAllContainers": 35,
+      "maxNumberOfHeavyContainers": 14,
+      "maxNumberOfRefrigeratedContainers": 9,
+      "maxNumberOfLiquidContainers": 8,
+      "fuelConsumptionPerKM": 0.19
+    }
+  ]
+}
