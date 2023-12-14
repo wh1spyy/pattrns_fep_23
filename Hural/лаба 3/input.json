@@ -1,0 +1,47 @@
+[
+  {
+    "port_id": "c0a3c12f-2631-4b11-b949-20f5c9d4d2c9",
+    "longitude": 90,
+    "latitude": -89,
+    "ships": [],
+    "basic": 7,
+    "heavy": 4,
+    "refrigerated": 6,
+    "liquid": 2
+  },
+  {
+    "port_id": "d719c0e7-4d9f-44cc-b0c6-22a27a4e45f6",
+    "longitude": 76,
+    "latitude": -71,
+    "ships": [
+      {
+        "ship_id": "4c7a5e9a-9a1b-4213-a1a0-409d0d98f50d",
+        "port_id": "d719c0e7-4d9f-44cc-b0c6-22a27a4e45f6",
+        "ports_deliver": "d2c4bda3-cc6a-4a1d-a3a6-c0d4e1d5d7cb",
+        "totalWeightCapacity": 1200,
+        "maxNumberOfAllContainers": 22,
+        "maxNumberOfHeavyContainers": 6,
+        "maxNumberOfRefrigeratedContainers": 3,
+        "maxNumberOfLiquidContainers": 5,
+        "fuelConsumptionPerKM": 18,
+        "ship_type": "LightWeightShip"
+      },
+      {
+        "ship_id": "1a1b07c0-dcce-46bb-bcec-404bf0ef7a95",
+        "port_id": "d719c0e7-4d9f-44cc-b0c6-22a27a4e45f6",
+        "ports_deliver": "c0a3c12f-2631-4b11-b949-20f5c9d4d2c9",
+        "totalWeightCapacity": 1100,
+        "maxNumberOfAllContainers": 21,
+        "maxNumberOfHeavyContainers": 5,
+        "maxNumberOfRefrigeratedContainers": 2,
+        "maxNumberOfLiquidContainers": 4,
+        "fuelConsumptionPerKM": 19,
+        "ship_type": "MediumShip"
+      }
+    ],
+    "basic": 2,
+    "heavy": 3,
+    "refrigerated": 4,
+    "liquid": 3
+  }
+]

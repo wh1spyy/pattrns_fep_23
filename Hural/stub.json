@@ -1,0 +1,46 @@
+{
+  "operators": [
+    {
+      "id": 1123,
+      "name": "Operator1",
+      "talking_charge": 1.2,
+      "message_cost": 0.79,
+      "network_charge": 0.25,
+      "discount_rate": 10
+    },
+    {
+      "id": 3213,
+      "name": "Operator2",
+      "talking_charge": 2.65,
+      "message_cost": 0.88,
+      "network_charge": 0.21,
+      "discount_rate": 9
+    },
+    {
+      "id": 5325,
+      "name": "Operator3",
+      "talking_charge": 0.31,
+      "message_cost": 1.55,
+      "network_charge": 0.11,
+      "discount_rate": 12
+    }
+  ],
+  "customers": [
+    {
+      "first_name": "Tyler",
+      "second_name": "Durden",
+      "age": 35
+    },
+    {
+      "first_name": "Killian",
+      "second_name": "Murphy",
+      "age": 43
+    },
+    {
+      "first_name": "John",
+      "second_name": "Wick",
+      "age": 45
+    }
+  ]
+}
+
